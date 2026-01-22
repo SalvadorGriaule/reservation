@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User As Authenticatable;
 
 
 class Admin extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable,HasFactory;
 
     protected $filable = [
         'name', 'email','password'

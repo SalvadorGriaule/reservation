@@ -24,11 +24,11 @@ class TrajetController extends Controller
             'gareArriver' => 'required|string',
             "heureDepart" => 'required|date',
             "heureArriver" => 'required|date',
-            "prix" => "required|float|min:0.01",
+            "prix" => "required|numeric|min:0.01",
             "capacite" => "required|integer|min:1",
         ]);
 
-        $user = Trajet::create([
+        $trajet = Trajet::create([
             'gareDepart' => $request->input('gareDepart'),
             'gareArriver' => $request->input('gareArriver'),
             'heureDepart' => $request->input('heureDepart'),

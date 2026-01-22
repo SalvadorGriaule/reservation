@@ -9,7 +9,7 @@
             </ul>
         </div>
     @endif
-    <form action="" class="flex flex-col justify-center items-center space-y-1" method="post">
+    <form action="/admin/login" class="flex flex-col justify-center items-center space-y-1" method="post">
         @csrf
         <input class="border-2 border-gray-500 border-solid p-1 placeholder:text-center" placeholder="email" type="email"
             name="email" id="" value="{{ old('email') }}">

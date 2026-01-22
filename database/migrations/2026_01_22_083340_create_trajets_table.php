@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("gareDepart");
             $table->string("gareArriver");
             $table->dateTime("heureArriver");
-            $table->dateTime("heureDépart");
+            $table->dateTime("heureDepart");
             $table->integer("capacite");
             $table->float("prix");
             $table->timestamps();

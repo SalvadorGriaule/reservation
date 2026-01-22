@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Trajet extends Model
 {
+    use HasFactory;
+
     protected $fillable = ["gareDepart","gareArriver","heureDepart","heureArriver","prix","capacite"];
 
     public function reservation(): HasMany

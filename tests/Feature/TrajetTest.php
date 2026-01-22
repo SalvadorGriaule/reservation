@@ -8,7 +8,7 @@ pest()->use(RefreshDatabase::class);
 
 test('user tente de crée un trajet', function () {
     $user = User::factory()->create();
-    $response = $this->actingAs($user)->post('/Trajet/create', ['gareDepart' => 'Gare de '.fake()->city(),
+    $response = $this->actingAs($user, "web")->post('/Trajet/create', ['gareDepart' => 'Gare de '.fake()->city(),
         'gareArriver' => 'Gare de '.fake()->city(),
         'heureDepart' => fake()->datetime()->format('Y-m-d H:i:s'),
         'heureArriver' => fake()->datetime()->format('Y-m-d H:i:s'),
